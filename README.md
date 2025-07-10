@@ -2,13 +2,13 @@
 # 🏠 WP Resistance Real Estate Solutions
 
 ![Live Website](https://img.shields.io/badge/Live-Website-brightgreen?style=for-the-badge)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 > **🌐 Live Demo:** [https://realestate.infobuild.site/](https://realestate.infobuild.site/)
 
-A modern, responsive real estate website showcasing property listings, services, and client testimonials with professional design and optimized performance.
+A modern, responsive real estate website built with React and Tailwind CSS, showcasing property listings, services, and client testimonials with professional design and optimized performance.
 
 ---
 
@@ -22,10 +22,11 @@ A modern, responsive real estate website showcasing property listings, services,
 - 📞 **Contact Information** - Multiple contact methods and location
 
 ### 💻 Technical Features
-- 📱 **Responsive Design** - Works on all devices
-- ⚡ **Fast Loading** - Optimized images and code
-- 🎨 **Modern UI** - Clean, professional aesthetic
-- 🔍 **SEO Optimized** - Search engine friendly
+- ⚛️ **React Components** - Modular, reusable UI components
+- 🎨 **Tailwind CSS** - Utility-first styling with responsive design
+- 📱 **Mobile-First** - Responsive design for all devices
+- ⚡ **Fast Loading** - Optimized React build and assets
+- 🔍 **SEO Optimized** - Search engine friendly structure
 - 🌐 **Cross-Browser Compatible** - Works on all major browsers
 
 ---
@@ -34,16 +35,26 @@ A modern, responsive real estate website showcasing property listings, services,
 
 ```
 wp-resistance-real-estate/
-├── 📄 index.html          # Main HTML file
-├── 🎨 styles/
-│   ├── main.css           # Primary stylesheet
-│   └── responsive.css     # Mobile responsiveness
-├── ⚙️ scripts/
-│   └── main.js           # Core JavaScript functionality
-├── 🖼️ images/
-│   ├── properties/       # Property listing images
-│   ├── team/            # Team member photos
-│   └── logos/           # Company branding assets
+├── 📄 public/
+│   ├── index.html         # Main HTML template
+│   └── favicon.ico        # Site favicon
+├── ⚛️ src/
+│   ├── components/        # React components
+│   │   ├── Header.jsx     # Navigation component
+│   │   ├── Hero.jsx       # Hero section
+│   │   ├── Properties.jsx # Property listings
+│   │   ├── Services.jsx   # Services section
+│   │   ├── Testimonials.jsx # Client reviews
+│   │   └── Footer.jsx     # Footer component
+│   ├── assets/            # Images and static files
+│   │   ├── properties/    # Property images
+│   │   └── team/         # Team photos
+│   ├── 🎨 styles/
+│   │   └── index.css     # Tailwind imports
+│   ├── App.jsx           # Main App component
+│   └── index.js          # React entry point
+├── 📦 package.json       # Dependencies and scripts
+├── ⚙️ tailwind.config.js  # Tailwind configuration
 └── 📝 README.md          # Project documentation
 ```
 
@@ -51,23 +62,41 @@ wp-resistance-real-estate/
 
 ## 🚀 Installation
 
+### 📋 Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn package manager
+
 ### 1️⃣ Clone Repository
 ```bash
 git clone https://github.com/yourusername/wp-resistance-real-estate.git
 cd wp-resistance-real-estate
 ```
 
-### 2️⃣ Open in Browser
-- 🖱️ **Simple way:** Double-click `index.html`
-- 💻 **Development:** Use Live Server extension in VS Code
-
-### 3️⃣ Local Server (Optional)
+### 2️⃣ Install Dependencies
 ```bash
-# Using Python
-python -m http.server 8000
+# Using npm
+npm install
 
-# Using Node.js
-npx http-server
+# Using yarn
+yarn install
+```
+
+### 3️⃣ Start Development Server
+```bash
+# Using npm
+npm start
+
+# Using yarn
+yarn start
+```
+
+### 4️⃣ Build for Production
+```bash
+# Using npm
+npm run build
+
+# Using yarn
+yarn build
 ```
 
 ---
@@ -80,15 +109,17 @@ npx http-server
 3. Test responsiveness by resizing browser window
 
 ### 💻 Local Development
-1. Open `index.html` in your code editor
-2. Modify HTML, CSS, or JavaScript files
-3. Refresh browser to see changes
-4. Use browser developer tools for debugging
+1. Run `npm start` to start development server
+2. Open [http://localhost:3000](http://localhost:3000) in browser
+3. Edit React components in `src/components/`
+4. Modify styles using Tailwind CSS classes
+5. Changes will hot-reload automatically
 
 ### 📱 Testing
 - **Desktop:** Chrome, Firefox, Safari, Edge
 - **Mobile:** Test on different screen sizes
 - **Responsive:** Use browser dev tools device simulator
+- **Components:** Individual component testing
 
 ---
 
@@ -96,10 +127,31 @@ npx http-server
 
 | Technology | Usage |
 |------------|-------|
-| 🌐 **HTML5** | Semantic markup and structure |
-| 🎨 **CSS3** | Styling and responsive design |
-| ⚡ **JavaScript** | Interactive functionality |
+| ⚛️ **React** | Component-based UI library |
+| 🎨 **Tailwind CSS** | Utility-first CSS framework |
+| ⚡ **JavaScript (ES6+)** | Modern JavaScript features |
+| 📦 **npm/yarn** | Package management |
+| 🔧 **Create React App** | Build tools and configuration |
 | 📱 **Responsive Design** | Mobile-first approach |
+
+---
+
+## 🎯 Key Components
+
+### ⚛️ React Components
+- **Header** - Navigation with responsive menu
+- **Hero** - Landing section with CTA
+- **Properties** - Property cards with mapping
+- **Services** - Service grid layout
+- **Testimonials** - Client review carousel
+- **Footer** - Contact info and links
+
+### 🎨 Tailwind Features
+- **Responsive Classes** - `sm:`, `md:`, `lg:`, `xl:` breakpoints
+- **Flexbox/Grid** - Modern layout systems
+- **Custom Colors** - Brand-specific color palette
+- **Hover Effects** - Interactive animations
+- **Mobile-First** - Responsive design approach
 
 ---
 
