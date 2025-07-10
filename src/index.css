@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+img:hover {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+body{
+  background-color:rgb(243,243,243)
+}

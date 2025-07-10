@@ -1,0 +1,14 @@
+
+
+
+AOS  (Animate On Scroll):
+
+Triggers animations when elements enter the viewport during scrolling
+Provides smooth, performant CSS animations
+Works well with React applications
+
+CLI installation: npm i AOS
+
+
+
+
